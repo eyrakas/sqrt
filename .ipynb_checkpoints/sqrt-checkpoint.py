@@ -13,9 +13,11 @@ import math
 
 opt = docopt(__doc__)
 
-def main(numb):
-  number = int(numb)
-  print(math.sqrt(numb))
+def main(number):
+  number = int(number)
+  if number < 0:
+     raise Exception("n should not a positive number")
+  print(math.sqrt(number))
     
 
 if __name__ == "__main__":
